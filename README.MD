@@ -3,7 +3,7 @@
 1. Language: JavaScript, NodeJs
 2. Framewrork: Express
 3. Database: MongoDB
-4. Documentation > open the swagger.yaml file
+4. Documentation > Open the link  https://jobs-api-final-01.herokuapp.com/
 
 #### Setup
 
