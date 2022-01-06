@@ -43,7 +43,7 @@ npm install && npm start > to install required packages and start up nodemon
 
 ### Get all Jobs
 - Gets you all the jobs you created
-- 
+
 ### Get Single Job
 - Search a job using a specific ID
 
