@@ -3,6 +3,7 @@
 1. Language: JavaScript, NodeJs
 2. Framewrork: Express
 3. Database: MongoDB
+4. Documentation > open the swagger.yaml file
 
 #### Setup
 
@@ -40,11 +41,17 @@ npm install && npm start > to install required packages and start up nodemon
 - If correct, generate Token
 - Send Response with Token
 
-#### Mongoose Errors
+### Get all Jobs
+- Gets you all the jobs you created
+- 
+### Get Single Job
+- Search a job using a specific ID
 
-- Validation Errors
-- Duplicate (Email)
-- Cast Error
+### Update Job
+- Update a Specific Chosen Job
+
+### Delete Job
+- Delete a single job
 
 #### Security features
 
