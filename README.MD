@@ -1,6 +1,7 @@
 #### Jobs API
 
-1. I have used NodeJs and Express framework for the backend
+1. Language: JavaScript, NodeJs
+2. framewrork: Express
 
 #### Setup
 
@@ -19,14 +20,6 @@ npm install && npm start
 
 - auth.js
 - jobs.js
-
-#### User Model
-
-Email Validation Regex
-
-```regex
-/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-```
 
 #### Register User
 
@@ -52,7 +45,7 @@ Email Validation Regex
 - Duplicate (Email)
 - Cast Error
 
-#### Security
+#### Security features
 
 - helmet
 - cors
@@ -61,7 +54,7 @@ Email Validation Regex
 
 Swagger UI
 
-```yaml
+<!-- ```yaml
 /jobs/{id}:
   parameters:
     - in: path
@@ -69,5 +62,8 @@ Swagger UI
       schema:
         type: string
       required: true
-      description: the job id
+      description: the job id -->
+
+```
+
 ```
