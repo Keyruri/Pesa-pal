@@ -1,0 +1,43 @@
+const User = require("../models/User");
+const { StatusCodes } = require("http-status-codes");
+const { BadRequestError,UnauthenticatedError } = require("../errors");
+
+
+const register = async (req, res) => {
+//   // Destructure from the req.body user input
+//   const {name,email,password} = req.body;
+
+//   // Random bytes and the number of random bytes
+//   const salt = await bcrypy.genSalt (10);
+//   const hashedPassword = await bcrypy.hash(password,salt);
+
+// const tempUser = {name,email,password: hashedPassword}
+const user = await User.create({ ...req.body });
+const token = user.createJWT();
+  res.status(StatusCodes.CREATED).json({user: {name: user.name}, token });
+};
+
+const login = async (req, res) => {
+  const {email, password } = req.body;
+  if(!email || !password){
+    throw new BadRequestError('Please provide email and password');
+  }
+  const user = await User.findOne({email});
+  
+  if(!user){
+    throw new UnauthenticatedError('Invalid credentials');
+  }
+  // Campare passoword
+  const isPasswordCorrect = await user.camparePassword(password);
+  if(!isPasswordCorrect){
+    throw new UnauthenticatedError('Invalid credentials');
+  }
+  
+  const token = user.createJWT();
+  res.status(StatusCodes.OK).json({user: {name: user.name}, token})
+};
+
+module.exports = {
+  register,
+  login,
+};
