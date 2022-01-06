@@ -1,12 +1,13 @@
 #### Jobs API
 
 1. Language: JavaScript, NodeJs
-2. framewrork: Express
+2. Framewrork: Express
+3. Database: MongoDB
 
 #### Setup
 
 ```bash
-npm install && npm start
+npm install && npm start > to install required packages and start up nodemon
 ```
 
 #### Database Connection
@@ -52,18 +53,6 @@ npm install && npm start
 - xss-clean
 - express-rate-limit
 
-Swagger UI
 
-<!-- ```yaml
-/jobs/{id}:
-  parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: the job id -->
 
-```
 
-```
